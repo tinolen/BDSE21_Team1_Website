@@ -7,7 +7,7 @@
         <meta name="author" content="" />
         <title>YOU! GOOD!</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}" />
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </header>
-        <!-- About-->
+        <!-- Introduction-->
         <section class="page-section bg-primary" id="about">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -64,7 +64,16 @@
                 </div>
             </div>
         </section>
-        <!-- Call to action-->
+        <!-- Research-->
+        <section class="page-section bg-dark text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Research</h2>
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='assets/img/research.png') }}" width=100% height=100%>
+                </div>
+            </div>
+        </section>
+        <!-- Skill-->
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Skill</h2>

@@ -131,7 +131,7 @@ def get_twii_data():
     labels.pop(0)
     area_data1.pop(0)
 
-    df = pd.read_csv('Stock_Profile.csv', index_col=0)
+    df = pd.read_csv('Stock_Profile_Sentcount.csv', index_col=0)
     df = df[['Name', 'News_size']]
     df = df.sort_values(by=['News_size'], ascending=False)[:10]
     bar_labels = df['Name'].values.tolist()
@@ -205,7 +205,7 @@ def get_data(code):
     return labels, area_data1, area_data2, bar_labels, bar_data
 
 def get_table_data():
-    df = pd.read_csv('Stock_Profile.csv')
+    df = pd.read_csv('Stock_Profile_Sentcount.csv')
     df = df.iloc[:50, :5]
     table_column = df.columns.values.tolist()
     table_data = df.values.tolist()
